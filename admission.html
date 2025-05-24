@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Now - Admission Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f0f2f5;
+            padding: 40px;
+        }
+
+        .register-container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .register-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #003366;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: #0055a5;
+            color: white;
+            padding: 12px 20px;
+            margin-top: 20px;
+            border: none;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #003f7f;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Online Application Form</h2>
+        <p>Fill in and submit the application form below.</p>
+        <form action="admission.php" method="post">
+            <label>Full Name:</label>
+            <input type="text" name="name" required>
+
+            <label>Email Address:</label>
+            <input type="email" name="email" required>
+
+            <label>Phone Number:</label>
+            <input type="text" name="phone" required>
+
+            <label>Course Applying For:</label>
+            <select name="course" required>
+                <option value="">--Select Course--</option>
+                <option>Diploma in ICT</option>
+                <option>Certificate in Business Management</option>
+                <option>Short Course in Graphics Design</option>
+            </select>
+
+            <label>Additional Notes:</label>
+            <textarea name="notes" rows="4" placeholder="Any extra information..."></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>

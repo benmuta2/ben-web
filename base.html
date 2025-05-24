@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ABC College - Home</title>
+    <base href="https://www.abccollege.com/"> <!-- Replace with your actual domain or base path -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #003366;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            background: #0055a5;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+        }
+
+        nav a:hover {
+            background: #003f7f;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background-color: #0055a5;
+            min-width: 180px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        .nav-item:hover .dropdown-content {
+            display: block;
+        }
+
+        .main-content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .main-content h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #003366;
+        }
+
+        .main-content p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to ABC College</h1>
+        <p>Your gateway to quality education</p>
+    </header>
+
+    <nav>
+        <div class="nav-item">
+            <a href="index.html">Home</a>
+            <div class="dropdown-content">
+                <a href="#">Latest News</a>
+                <a href="#">Events</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="about.html">About Us</a>
+            <div class="dropdown-content">
+                <a href="#">Mission</a>
+                <a href="#">Vision</a>
+                <a href="#">Our Team</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="gallery.html">Gallery</a>
+            <div class="dropdown-content">
+                <a href="#">Campus Life</a>
+                <a href="#">Events</a>
+                <a href="#">Graduation</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="courses.html">Courses</a>
+            <div class="dropdown-content">
+                <a href="#">Diploma Programs</a>
+                <a href="#">Certificate Programs</a>
+                <a href="#">Short Courses</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="register.html">Register</a>
+            <div class="dropdown-content">
+                <a href="signup.html">Sign Up</a>
+                <a href="login.html">Login</a>
+                <a href="#">Scholarships</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h2>Empowering Future Leaders</h2>
+        <p>ABC College offers a diverse range of academic programs tailored to nurture talent and transform students into confident professionals. Explore our courses, view our vibrant campus life, and begin your educational journey with us today.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 ABC College. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

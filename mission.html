@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="ABC College - Explore our diploma, certificate, and short courses. Your gateway to excellence.">
+<meta name="keywords" content="ABC College, diploma, certificate, education, short courses, Kenya">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<title>college</title>
+    <style>
+        @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-content {
+        padding: 20px 10px;
+    }
+}
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #003366;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            background: #0055a5;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+        }
+
+        nav a:hover {
+            background: #003f7f;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background-color: #0055a5;
+            min-width: 180px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        .nav-item:hover .dropdown-content {
+            display: block;
+        }
+
+        .main-content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .main-content h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #003366;
+        }
+
+        .main-content p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+        .marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: #0055a5;
+    color: white;
+    padding: 10px 0;
+}
+
+.marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 15s linear infinite;
+    font-size: 18px;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/*image sliders*/
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: slideShow 12s infinite;
+}
+
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 8s;
+}
+
+@keyframes slideShow {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) scale(1.05);
+    }
+    10% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    40% {
+        opacity: 0;
+        transform: translateY(100%) scale(0.95);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/*CSS for the section counters*/
+.counter-section {
+    background: url('images/campus5.jpg') no-repeat center center/cover;
+    padding: 60px 20px;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+.counter-section .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 50px 0;
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.counter-box {
+    flex: 1 1 200px;
+    min-width: 200px;
+}
+
+.counter-box h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #00ffcc;
+}
+
+.counter-box p {
+    font-size: 18px;
+    color: #fff;
+}
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <header>
+               <img src="images/campus6.png" alt="ABC College Logo" style="height:60px; float:left;">
+    
+            <h1>Welcome to ABC College</h1>
+        <p>Your gateway to quality education</p>
+
+
+    </header>
+<div class="marquee-container">
+    <div class="marquee-text">
+        📢 Admissions for 2025 are now open! | 🎓 Explore our diploma, certificate, and short courses | 🏫 Welcome to ABC College – Your Gateway to Excellence!
+    </div>
+</div>
+<!-- In <body>, above <nav> -->
+<div id="mobile-menu-toggle" style="display:none; padding:10px; background:#0055a5; color:white; text-align:right; cursor:pointer;">
+    ☰ Menu
+    <script>
+    // Mobile toggle
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggle = document.getElementById('mobile-menu-toggle');
+        const nav = document.querySelector('nav');
+
+        toggle.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        function handleResize() {
+            if (window.innerWidth < 768) {
+                nav.style.display = 'none';
+                toggle.style.display = 'block';
+            } else {
+                nav.style.display = 'flex';
+                toggle.style.display = 'none';
+            }
+        }
+
+        window.addEventListener('resize', handleResize);
+        handleResize();
+    });
+</script>
+<button id="scrollTopBtn" style="display:none; position:fixed; bottom:30px; right:30px; padding:10px 15px; background:#0055a5; color:white; border:none; border-radius:5px; cursor:pointer;">↑ Top</button>
+<script>
+    const btn = document.getElementById("scrollTopBtn");
+    window.onscroll = () => {
+        btn.style.display = (document.documentElement.scrollTop > 100) ? "block" : "none";
+    };
+    btn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+</script>
+
+
+</div>
+
+    <nav>
+        <div class="nav-item">
+            <a href="index.html">Home</a>
+            <div class="dropdown-content">
+                <a href="#">Latest News</a>
+                <a href="#">Events</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="about.html">About Us</a>
+            <div class="dropdown-content">
+                <a href="#">Mission</a>
+                <a href="#">Vision</a>
+                <a href="#">Our Team</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="gallery.html">Gallery</a>
+            <div class="dropdown-content">
+                <a href="#">Campus Life</a>
+                <a href="#">Events</a>
+                <a href="#">Graduation</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="courses.html">Courses</a>
+            <div class="dropdown-content">
+                <a href="#">Diploma Programs</a>
+                <a href="#">Certificate Programs</a>
+                <a href="#">Short Courses</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="register.html">Register</a>
+            <div class="dropdown-content">
+                <a href="signup.html">Sign Up</a>
+                <a href="login.html">Login</a>
+                <a href="#">Scholarships</a>
+            </div>
+        </div>
+    </nav>
+       <div class="main-content">
+        <h2>Empowering Future Leaders</h2>
+        <p>ABC College offers a diverse range of academic programs tailored to nurture talent and transform students into confident professionals. Explore our courses, view our vibrant campus life, and begin your educational journey with us today.</p>
+    </div>
+ 
+
+
+<!-- this is the section at the bottom -->
+
+<section style="background: #002244; color: white; padding: 40px 20px; display: flex; flex-wrap: wrap; justify-content: space-around; text-align: left;">
+
+    <div style="flex: 1 1 200px; margin: 10px;">
+        <h3>Quick Contact</h3>
+        <br>
+       <p><i class="fas fa-map-marker-alt"></i>Twiga Towers, Second Floor, Moi Avenue, Nairobi, Kenya</p>
+    <p><i class="fas fa-phone-alt"></i> +254 708 862 323</p>
+    <p><i class="fas fa-envelope"></i> info@abccollege.ac.ke</p>
+    </div>
+
+    <div style="flex: 1 1 200px; margin: 10px; padding: 5px;">
+        <h3>Follow Us</h3>
+        <br>
+        <p>
+            <a href="#" style="color: #fff; text-decoration: none;">Facebook</a><br>
+            <a href="#" style="color: #fff; text-decoration: none;">Twitter</a><br>
+            <a href="#" style="color: #fff; text-decoration: none;">Instagram</a><br>
+            <a href="#" style="color: #fff; text-decoration: none;">LinkedIn</a>
+        </p>
+    </div>
+
+    <div style="flex: 1 1 200px; margin: 10px;">
+        <h3>Subscribe</h3>
+        <form action="updated.php" method="post">
+            <input type="email" name="email" placeholder="Enter your email" style="padding: 8px; width: 90%; border: none; margin-bottom: 10px;">
+            <br>
+            <input type="submit" value="Subscribe" style="padding: 10px 20px; background: #0055a5; border: none; color: white; cursor: pointer;">
+        </form>
+    </div>
+
+    <div style="flex: 1 1 200px; margin: 10px;">
+        <h3>Want to Join Us?</h3>
+        <br>
+        <p>Start your journey today. <br>Explore our programs and apply online.</p>
+        <a href="admission.html" style="color: #00ccff; text-decoration: underline;">Apply Now</a>
+    </div>
+
+    <div style="flex: 1 1 200px; margin: 10px;">
+        <h3>Featured Links</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li><a href="#" style="color: white; text-decoration: none;">Student Portal</a></li>
+            <li><a href="#" style="color: white; text-decoration: none;">Library Services</a></li>
+            <li><a href="#" style="color: white; text-decoration: none;">Campus Map</a></li>
+            <li><a href="#" style="color: white; text-decoration: none;">Academic Calendar</a></li>
+            <li><a href="FAQs.html" style="color: white; text-decoration: none;">FAQs</a></li>
+
+        </ul>
+    </div>
+
+</section>
+
+<footer style="background: #001122; color: white; text-align: center; padding: 10px 0;">
+    <p>&copy; 2025 ABC College. All rights reserved.</p>
+            <p id="datetime" style="font-size:14px;"></p>
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        document.getElementById('datetime').textContent = now.toLocaleString();
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+</script>
+</footer>
+
+</body>
+</html>

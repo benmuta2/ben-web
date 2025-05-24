@@ -1,0 +1,248 @@
+  @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-content {
+        padding: 20px 10px;
+    }
+}
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #003366;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            background: #0055a5;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+        }
+
+        nav a:hover {
+            background: #003f7f;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background-color: #0055a5;
+            min-width: 180px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        .nav-item:hover .dropdown-content {
+            display: block;
+        }
+
+        .main-content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .main-content h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #003366;
+        }
+
+        .main-content p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+        .marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: #0055a5;
+    color: white;
+    padding: 10px 0;
+}
+
+.marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 15s linear infinite;
+    font-size: 18px;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/*image sliders*/
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: slideShow 12s infinite;
+}
+
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 8s;
+}
+
+/*mobile devices*/
+@keyframes slideShow {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) scale(1.05);
+    }
+    10% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    40% {
+        opacity: 0;
+        transform: translateY(100%) scale(0.95);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/*CSS for the section counters*/
+.counter-section {
+    background: url('images/campus5.jpg') no-repeat center center/cover;
+    padding: 60px 20px;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+.counter-section .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 50px 0;
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.counter-box {
+    flex: 1 1 200px;
+    min-width: 200px;
+}
+
+.counter-box h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #00ffcc;
+}
+
+.counter-box p {
+    font-size: 18px;
+    color: #fff;
+}
+.faq-section {
+  background-color: #f4f4f4;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 32px;
+  color: #003366;
+  margin-bottom: 40px;
+}
+
+.faq {
+  margin: 10px auto;
+  max-width: 800px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.faq-question {
+  background-color: #0055a5;
+  color: white;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 18px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #003f7f;
+}
+
+.faq-answer {
+  display: none;
+  padding: 15px 20px;
+  background-color: #ffffff;
+  font-size: 16px;
+  color: #333;
+}
